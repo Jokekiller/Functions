@@ -10,7 +10,7 @@ def calculateOvertimePay (overTimeHours,overTimePay):
     overTimePay = overTimeHours * (1.5 * overTimePay)
     totalOvertimePay = overTimeHours * overTimePay
     basicPay = 40 * overTimePay
-    totalPay = basciPay + totalOvertimePay
+    totalPay = basicPay + totalOvertimePay
     return overTimePay
 def workDetails ():
     hours = int(input("Enter the hours worked this week: "))
@@ -28,10 +28,9 @@ def calculatePay():
     hours, pay = workDetails()
     totalPay = calculateTotalPay(hours, pay)
     displayTotalPay(totalPay)
-    
+
+
 
     
-              
-
 #main program
 calculatePay()
