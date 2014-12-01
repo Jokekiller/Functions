@@ -13,8 +13,8 @@ def generateQuestion(timesTable):
     return answer, number2
 def formatQuestion(number1, number2):
     print("Question: {0}x{1}".format(number2,number1))
-def finalAnswer(number1, number2):
-    userAnswer = int(input(str(number2)+'x'+str(number1)+'= '))
+def finalAnswer(answer, number2):
+    userAnswer = int(input(str(number2)+'x'+str(answer)+'= '))
     if userAnswer == answer:
         print("Answer correct")
         print()
