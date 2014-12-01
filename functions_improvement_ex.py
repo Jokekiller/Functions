@@ -5,15 +5,16 @@ import random
 def timeTableDetails():
     timesTable = int(input("Enter the timestable you want to test: "))
     return timesTable
-def generateQuestions(timesTable, questions):
-    for questions in range (1,6):
+def generateQuestion(timesTable):
+    for question in range (1,6):
         number1 = timesTable
         number2 = random.randrange(1,13)
         answer = number1 * number2
-    print("Question: {0} ".format(questions))
-    return answer
-def finalAnswer(userAnswer, answer):
-    userAnswer = int(input(str(number1)+'x'+str(number2)+'=?'))
+    return answer, number2
+def formatQuestion(number1, number2):
+    print("Question: {0}x{1}".format(number2,number1))
+def finalAnswer(number1, number2):
+    userAnswer = int(input(str(number2)+'x'+str(number1)+'= '))
     if userAnswer == answer:
         print("Answer correct")
         print()
@@ -22,7 +23,9 @@ def finalAnswer(userAnswer, answer):
         print()
 def timesTableActual():
     timesTable = timeTableDetails()
-    questions = generateQuestions(timesTable, questions)
-
+    answer, number2 = generateQuestion(timesTable)
+    question = formatQuestion(timesTable, number2)
+    actualAnswer = finalAnswer(timesTable, number2)
+    
 #Main program
-timesTableActual()
+timesTableActual() 
