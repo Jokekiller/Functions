@@ -16,9 +16,11 @@ def number_verification(number_of_stars):
             print("number is not odd, try again")
     return number_of_stars
 def printing_stars(number_of_stars):
+    space_needed = number_of_stars
     while row in range(number_of_stars):
-        print("{0:^ 2}".format(number_of_stars), "*"* number_of_stars)
+        print(("{0:^"+str(space_needed)+"}").format("*"*number_of_stars))
         number_of_stars = number_of_stars - 2
 #main program
 number_of_stars = star_details()
+number_of_stars = number_verification(number_of_stars)
 printing_stars(number_of_stars)
