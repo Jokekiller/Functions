@@ -9,11 +9,8 @@ def star_details():
     return number_of_stars
 def number_verification(number_of_stars):
     while number_of_stars %2 ==0:
+        print("Number is not odd, please try again")
         number_of_stars = int(input("Enter a number: "))
-        if number_of_stars %2 == 0:
-            print("Number is odd")
-        else:
-            print("number is not odd, try again")
     return number_of_stars
 def printing_stars(number_of_stars):
     space_needed = number_of_stars
