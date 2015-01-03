@@ -2,7 +2,6 @@
 #15-12-2014
 #Star diamond
 
-row = 0
 
 def star_details():
     number = int(input("Enter a number: "))
@@ -16,13 +15,16 @@ def verification(number):
         print("Number not cool")
     return valid
 def printing_stars(number):
-    space_needed = (number - 1)/2
-    while row in range(number):
-         print(("{0:^"+ str(space_needed) + "}").format("*" * number))
-         number = number + 2
-    while row in range(number):
-        print(("{0:^"+ str(space_needed) + "}").format("*" * number))
-        number = number - 2
+    space_needed = number
+    row = 1
+    s = "{0:^" + str(space_needed) + "}"
+    while row < number:
+        print (s.format('*' * row))
+        row = row + 2
+    row = number
+    while row >= 0:
+        print(s.format("*" * row))
+        row = row - 2
 
 #main program
 number = star_details()
